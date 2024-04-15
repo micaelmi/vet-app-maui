@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="VetApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:VetApp"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Vets"
+        ContentTemplate="{DataTemplate local:Vet}"
+        Route="Vets" />
+
+    <ShellContent
+        Title="Pets"
+        ContentTemplate="{DataTemplate local:Pet}"
+        Route="Pets" />
+
+    <ShellContent
+        Title="Agenda"
+        ContentTemplate="{DataTemplate local:Agenda}"
+        Route="Agenda" />
+
+</Shell>

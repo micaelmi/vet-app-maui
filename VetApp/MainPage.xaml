@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VetApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="vet.png"
+                SemanticProperties.Description="Logo VetApp"
+                HeightRequest="128"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Bem vind@ ao VetApp!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            
+            <Label
+                Text="Selecione o módulo que você deseja visualizar."
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="16"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout Padding="16" Spacing="16" HorizontalOptions="Center">
+                <Button
+                x:Name="Vet"
+                Text="Vets"
+                Clicked="Vet_Clicked"
+                HorizontalOptions="Center"
+                WidthRequest="120"
+                    BackgroundColor="#d92e97"
+                    TextColor="#ddd"/>
+                
+                <Button
+                x:Name="Pet"
+                Text="Pets"
+                Clicked="Pet_Clicked"
+                HorizontalOptions="Center"
+                    BackgroundColor="#d92e97"
+                    TextColor="#ddd"
+                WidthRequest="120"/>
+                
+                <Button
+                x:Name="Agenda"
+                Text="Agenda"
+                Clicked="Agenda_Clicked"
+                HorizontalOptions="Center"
+                    BackgroundColor="#d92e97"
+                    TextColor="#ddd"
+                    WidthRequest="120"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

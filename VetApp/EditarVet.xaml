@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VetApp.EditarVet"
+             Title="EditarVet">
+    <VerticalStackLayout>
+        <Entry Text="{Binding Nome}" Placeholder="Digite o nome"/>
+        <Entry Text="{Binding Especialidade}" Placeholder="Digite a especialidade"/>
+        <Button Text="Salvar" x:Name="Salvar" Clicked="Salvar_Clicked"
+                HorizontalOptions="Center"
+            WidthRequest="120"
+            BackgroundColor="#d92e97"
+            TextColor="#ddd"/>
+        <Button Text="Cancelar" x:Name="Cancelar" Clicked="Cancelar_Clicked"
+                            HorizontalOptions="Center"
+            WidthRequest="120"
+            BackgroundColor="#d92e97"
+            TextColor="#ddd"/>
+    </VerticalStackLayout>
+</ContentPage>

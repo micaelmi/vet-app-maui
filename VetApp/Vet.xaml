@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VetApp.Vet"
+             Title="Vet">
+    <VerticalStackLayout>
+        <Label 
+            Text="Vets"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="28"
+            Margin="8"/>
+        <ScrollView>
+            <ListView x:Name="vets">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Editar" x:Name="Editar" Clicked="Editar_Clicked"/>
+                                    <MenuItem Text="Excluir" x:Name="Excluir" Clicked="Excluir_Clicked"/>
+                                </ViewCell.ContextActions>
+                                <HorizontalStackLayout Spacing="16" Padding="16">
+                                    <Label Text="{Binding Nome}" />
+                                    <Label Text="{Binding Especialidade}" />
+                                </HorizontalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+        </ScrollView>
+        <Button
+            x:Name="Novo"
+            Text="Novo"
+            Clicked="Novo_Clicked"
+            HorizontalOptions="Center"
+            WidthRequest="120"
+            BackgroundColor="#d92e97"
+            TextColor="#ddd"/>
+    </VerticalStackLayout>
+</ContentPage>

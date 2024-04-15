@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VetApp.NovoVet"
+             Title="NovoVet">
+    <VerticalStackLayout>
+        <Label 
+            Text="Cadastrar Vet"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="28"/>
+        <VerticalStackLayout Padding="32,16" Spacing="8">
+            <Label Text="Nome" />
+            <Entry Text="{Binding Nome}" Placeholder="Nome do veterinário" />
+
+            <Label Text="Especialidade" />
+            <Entry Text="{Binding Especialidade}" Placeholder="Especialidade do veterinário" />
+
+            <Button
+            x:Name="Cadastrar"
+            Text="Cadastrar"
+            Clicked="Cadastrar_Clicked"
+            HorizontalOptions="Center"
+            WidthRequest="120"
+            BackgroundColor="#d92e97"
+            TextColor="#ddd"/>
+
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
